@@ -15,5 +15,3 @@ clf = clf.fit(train_data, train_target)
 
 print(test_target)
 print(clf.predict(test_data))
-
-
