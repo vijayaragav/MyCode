@@ -9,15 +9,17 @@ m = len(X)
 X = X.reshape((m, 1))
 
 reg = LinearRegression()
-reg = reg.fit(X, Y)
-Y_pred = reg.predict(X)
-
+rega = reg.fit(X, Y)
+Y_pred = rega.predict(X)
+Z = rega.predict([[4502]])
+print(Z)
 import matplotlib.pyplot as plt
 plt.plot(X, Y_pred, color='red')
+plt.scatter(4502, Z, color='yellow')
 plt.scatter(X, Y, color='Blue')
 plt.title('Headbrain')
 plt.xlabel('Head size')
-plt.ylabel
+plt.ylabel('Brainweight')
 plt.show()
 
 r2_score = reg.score(X, Y)
