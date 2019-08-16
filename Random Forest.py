@@ -19,15 +19,11 @@ model.fit(X_train, Y_train)
 model.score(X_test, Y_test)
 Y_predict = model.predict(X_test)
 
-
-
-
-
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(Y_test, Y_predict)
 
-#seaborn
 
+#seaborn
 import matplotlib.pyplot as plt
 import seaborn as sb
 plt.figure(figsize=(6,5))
